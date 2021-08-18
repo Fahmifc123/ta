@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<title>TA Muhammad Fahmi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:lightgrey;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+</style>
+<body class="w3-sand">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right">Logo</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="/static/images/fahmi.png" class="w3-circle w3-margin-right" style="width:46px">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <span>Welcome, <strong>Fahmi</strong></span><br>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding w3-sand"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="prediction" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Prediction</a>
+    <a href="output" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Output</a>
+    <a href="maps" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Maps</a>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i>   Dashboard Analytics Analisis Sentimen Vaksin Covid-19 Menggunakan Metode Lexicon Based dan CNN</b></h5>
+  </header>
+
+<center>
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+          <h1>95%</h1>
+        <div class="w3-clear"></div>
+        <h4>Akurasi Lexicon Based</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+          <h1>97%</h1>
+        <div class="w3-clear"></div>
+        <h4>Akurasi CNN</h4>
+      </div>
+    </div>
+  </div>
+</center>
+
+<table style="width:100%">
+  <tr>
+    <td>Wordcloud Keseluruhan</td>
+    <td>Wordcloud Sentimen Positif</td>
+    <td>Wordcloud Sentimen Negatif</td>
+    <td>Wordcloud Sentimen Netral</td>
+  </tr>
+  <tr>
+    <td><img src="/static/images/wcfull.png" class="w3-margin-left" style="width:300px"></td>
+    <td><img src="/static/images/wcpos.png" class="w3-margin-left" style="width:300px"></td>
+    <td><img src="/static/images/wcneg.png" class="w3-margin-left" style="width:300px"></td>
+    <td><img src="/static/images/wcneu.png" class="w3-margin-left" style="width:300px"></td>
+  </tr>
+
+</table>
+
+<center>
+<table class="styled-table">
+    <thead>
+        <tr>
+          <th>3 Opini Sentimen Positif</th>
+          <th>3 Opini Sentimen Negatif</th> 
+          <th>3 Opini Sentimen Netral</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1. "Yuk! Yang sudah vaksin dan dapat sertifikat bisa dijadikan kartu ya🤗 Bisa cetak disini, untuk keamanan data dijami… https://t.co/mi8qJpOSyq" <br>
+                2. "Pemprov Jateng Dorong Siswa Jalani Vaksin - https://t.co/FbBX66MyYp <br>
+                3. "Stok Vaksin di Jateng Akan Terus Ditambah - #LawanCovid19</td>
+            <td>1. divaksin vaksin virusnya membunuh manusia <br>
+                2. netizen gamau vaksin emosi <br>
+                3. disuruh vaksin takut😖</td>
+            <td>1. RT @zalrijal: Di Bandung, yang mau vaksin, hari Minggu, 15 Agustus 2021 di Gor Bulutangkis Lodaya, silahkan daftar melalui https://t.co/OV5… <br>
+                2. temen-temen gua batu semua yaallah mau vaksin aja kayak ngajakin turun ke medan perang Bandung lautan api <br>
+                3. jadwal vaksin 🙄 </td>   
+        </tr>
+        <!-- and so on... -->
+    </tbody>
+</table>
+
+</center>
+
+ <!--  <h5> Wordcloud Keseluruhan </h5>
+  <img src="/static/images/wcfull.png" class="w3-margin-left" style="width:300px"> -->
+
+
+  
+
+  <!-- Footer -->
+  <div id="footer" class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+  <!-- End page content -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
